@@ -7,8 +7,15 @@ fun main(args: Array<String>) {
     persons.add(Person("John", "Walsh"))
     persons.add(Person("Sheila", "Flynn"))
 
-    for ((index, value) in persons.withIndex())
-        println("$index: $value")
+
+    println("\nSorting by last name, last name uppercased:")
+    persons
+        .sortedBy {it.lastName}
+        .forEach { println("Person: ${it.firstName}, ${it.lastName.uppercase()}")}
+
+
+
+
 }
 
 
